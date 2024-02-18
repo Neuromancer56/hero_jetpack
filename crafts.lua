@@ -18,7 +18,7 @@ if true then
 	end
 
   minetest.register_craft({
-    output = "sum_jetpack:jetpack_fuel 8",
+    output = "hero_jetpack:jetpack_fuel 8",
     recipe = {
       {"",s,""},
       {c, c, c},
@@ -28,7 +28,7 @@ if true then
   if has("mcl_core") then
     c = "mcl_core:charcoal_lump"
     minetest.register_craft({
-      output = "sum_jetpack:jetpack_fuel 8",
+      output = "hero_jetpack:jetpack_fuel 8",
       recipe = {
         {s,"", s},
         {c, c, c},
@@ -59,9 +59,9 @@ if true then
     i = "mcl_furnaces:furnace"
   end
 
-  local f = "sum_jetpack:jetpack_fuel"
+  local f = "hero_jetpack:jetpack_fuel"
 	minetest.register_craft({
-		output = "sum_jetpack:jetpack",
+		output = "hero_jetpack:jetpack",
 		recipe = {
 			{l, f, l},
 			{g, s, g},
@@ -71,9 +71,9 @@ if true then
 end
 
 minetest.register_craft({
-  output = "sum_jetpack:jetpack",
+  output = "hero_jetpack:jetpack",
   recipe = {
-    {"sum_jetpack:jetpack_fuel"},
-    {"sum_jetpack:jetpack"}
+    {"hero_jetpack:jetpack_fuel"},
+    {"hero_jetpack:jetpack"}
   },
 })
