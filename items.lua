@@ -7,7 +7,7 @@ sum_jetpack.on_use = function(itemstack, user, pointed_thing)
   local pos = user:get_pos()
   local parachute = minetest.add_entity(pos, "hero_jetpack:jetpack_ENTITY")
   local ent = parachute:get_luaentity()
-  -- if ent then ent._itemstack = itemstack end
+  -- if ent then ent._itemstack = itemstack end  --this was commented out
   minetest.after(0.1, function(ent, user, itemstack)
     if not ent or not user then return end
     local v = user:get_velocity()
@@ -41,7 +41,8 @@ minetest.register_tool("hero_jetpack:jetpack", {
 	stack_max = 1,
   -- range = 0,
 	groups = { usable = 1, transport = 1 },
-	on_secondary_use = sum_jetpack.on_use,
+	--on_secondary_use = sum_jetpack.on_use,
+  on_use = sum_jetpack.on_use,
 	-- _on_dispense = sum_jetpack.on_use,
   _driver = nil,
   -- _mcl_uses = 30,
